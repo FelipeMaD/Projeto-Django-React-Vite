@@ -1,0 +1,12 @@
+/* src/styles/ReadPost.css */
+
+.read-post-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.post-image {
+  max-width: 100%;
+  margin-top: 20px;
+}

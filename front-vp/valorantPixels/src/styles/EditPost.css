@@ -1,0 +1,60 @@
+/* src/styles/EditPost.css */
+.edit-post-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.post-image {
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+
+.post-image img {
+  max-width: 100%;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+input[type="file"] {
+  margin-bottom: 20px;
+}
+
+.save-button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.save-button:hover {
+  background-color: #218838;
+  color: #fff;
+}
+
+.back-button {
+  background-color: #292929;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
