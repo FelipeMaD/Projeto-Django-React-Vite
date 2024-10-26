@@ -1,4 +1,4 @@
 // src/config.jsx
-const API_URL = 'http://localhost/api/'
+const API_URL = 'http://localhost:8000/api/'
 
 export { API_URL }
