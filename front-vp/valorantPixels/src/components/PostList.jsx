@@ -34,7 +34,8 @@ function PixelList() {
     api.get(`/pixels/`)
       .then(response => {
         // Atualiza o estado com a lista de posts obtida da API.
-        setPixels(response.data)
+        console.log('Resposta da API:', response.data)
+        setPixels(response.data.results)
       })
       .catch(error => {
         console.error('Erro ao buscar Pixels:', error)

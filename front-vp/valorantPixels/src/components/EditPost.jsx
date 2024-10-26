@@ -100,7 +100,7 @@ function EditPost() {
         {/* Botão para salvar o post (editar ou criar). */}
         <button className="save-button" type="submit">{postId ? 'Salvar' : 'Criar'}</button>
         {/* Link para voltar para a listagem de posts. */}
-        <Link to="/posts" >
+        <Link to="/pixels" >
           <button type="button" className="back-button">Voltar para Listagem</button>
         </Link>
       </form>
