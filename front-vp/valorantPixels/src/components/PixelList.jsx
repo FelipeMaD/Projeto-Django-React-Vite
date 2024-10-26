@@ -23,6 +23,7 @@ function PixelList() {
       // Atualiza o estado removendo o post excluído da lista.
       const updatedPixels = pixels.filter(pixel => pixel.id !== pixelId)
       setPixels(updatedPixels)
+      alert('Seu pixel foi deletado com sucesso!')
     } catch (error) {
       console.error('Erro ao deletar pixel:', error)
     }

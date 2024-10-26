@@ -2,12 +2,12 @@
 
 // Importa os componentes necessários do react-router-dom e os componentes da aplicação
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import PostList from './components/PostList'
-import CreatePost from './components/EditPost'
+import PixelList from './components/PixelList'
+import CreatePixel from './components/EditPixel'
 import Login from './components/Login'
 import PrivateRoute from './components/PrivateRoute'
-import EditPost from './components/EditPost'
-import ReadPost from './components/ReadPost'
+import EditPixel from './components/EditPixel'
+import ReadPixel from './components/ReadPixel'
 
 // Define o componente AppRouter que contém as rotas da aplicação
 function AppRouter() {
@@ -21,13 +21,13 @@ function AppRouter() {
         {/* Rotas protegidas que requerem autenticação */}
         <Route element={<PrivateRoute />}>
           {/* Rota para a listagem de posts */}
-          <Route path="/pixels" element={<PostList />} />
+          <Route path="/pixels" element={<PixelList />} />
           {/* Rota para criar um novo post */}
-          <Route path="/pixels/create" element={<CreatePost />} />
+          <Route path="/pixels/create" element={<CreatePixel />} />
           {/* Rota para editar um post existente */}
-          <Route path="/pixels/:pixelId/edit" element={<EditPost />} />
+          <Route path="/pixels/:pixelId/edit" element={<EditPixel />} />
           {/* Rota para visualizar os detalhes de um post */}
-          <Route path="/pixels/:pixelId/detail" element={<ReadPost />} />
+          <Route path="/pixels/:pixelId/detail" element={<ReadPixel />} />
         </Route>
       </Routes>
     </Router>

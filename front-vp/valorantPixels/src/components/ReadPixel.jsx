@@ -9,48 +9,48 @@ import api from '../api'
 import '../styles/ReadPost.css'
 
 // Define o componente ReadPost.
-function ReadPost() {
+function ReadPixel() {
   // Obtém o parâmetro postId da URL.
-  const { postId } = useParams()
+  const { pixelId } = useParams()
 
   // Define estados para armazenar o título, conteúdo e imagem do post.
-  const [title, setTitle] = useState('')
-  const [content, setContent] = useState('')
-  const [image, setImage] = useState('')
+  const [titulo, setTitle] = useState('')
+  const [descricao, setContent] = useState('')
+  const [upload, setImage] = useState('')
 
   // Efeito que é executado quando o postId é alterado.
   useEffect(() => {
     // Faz uma solicitação GET para a API para obter os detalhes do post com o ID fornecido.
-    api.get(`/posts/${postId}/`)
+    api.get(`/pixels/${pixelId}/`)
       .then(response => {
         // Atualiza o estado com os detalhes do post obtidos da API.
-        setTitle(response.data.title)
-        setContent(response.data.content)
-        setImage(response.data.image)
+        setTitle(response.data.titulo)
+        setContent(response.data.descricao)
+        setImage(response.data.upload)
       })
       .catch(error => {
-        console.error('Erro ao buscar detalhes do post:', error)
+        console.error('Erro ao buscar detalhes do pixel:', error)
       })
-  }, [postId])
+  }, [pixelId])
 
   // Retorna a interface do componente ReadPost.
   return (
     <div className="read-post-container">
       {/* Título da página */}
-      <h1>Detalhes do Post</h1>
+      <h1>Detalhes do Pixel</h1>
       {/* Link para voltar para a lista de posts */}
-      <Link to="/posts" >
+      <Link to="/pixels" >
         <button type="button" className="back-button">Voltar para Listagem</button>
       </Link>
       {/* Título do post */}
-      <h2>{title}</h2>
+      <h2>{titulo}</h2>
       {/* Conteúdo do post */}
-      <p>{content}</p>
+      <p>{descricao}</p>
       {/* Imagem do post, se existir */}
-      {image && <img src={image} alt="Imagem do Post" className="post-image" />}
+      {upload && <img src={upload} alt="Imagem do Pixel" className="post-image" />}
     </div>
   )
 }
 
 // Exporta o componente ReadPost.
-export default ReadPost
+export default ReadPixel
