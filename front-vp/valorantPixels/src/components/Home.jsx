@@ -2,6 +2,11 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/Home.css'
 import logo from '../assets/logo.png'
+import { TiSocialInstagram , TiSocialFacebook, } from "react-icons/ti";
+import {FaXTwitter } from "react-icons/fa6";
+import { FaReddit } from "react-icons/fa";
+import { BiPlusMedical } from "react-icons/bi";
+import { BiSearchAlt2 } from "react-icons/bi";
 
 function Home(){
     return(
@@ -18,10 +23,10 @@ function Home(){
             </header>
             <nav className='navbar'>
                 <div className='links-navbar'>
-                    <Link to="#">agentes</Link>
-                    <Link to="#">mapas</Link>
-                    <Link to="#">top ajudantes</Link>
-                    <Link to="#">comunidade</Link>
+                    <Link to="#" className='links-escolha'>agentes</Link>
+                    <Link to="#" className='links-escolha'>mapas</Link>
+                    <Link to="#" className='links-escolha'>top ajudantes</Link>
+                    <Link to="#" className='links-escolha'>comunidade</Link>
                 </div>
                 <div>
                     <div></div>
@@ -29,20 +34,33 @@ function Home(){
                 </div>
             </nav>
             <main className='main'>
+                <div className='background'>
+
+                </div>
                 <div className="Main-content-area">
-                    <div>
-                        <Link to="/pixels/create" className="create-button">Criar Novo Pixel</Link>
+                    <div className='bg-icons left'>
+                        <Link to="/pixels/create" className='link-middle-left'><BiPlusMedical  color='#AE3C56' size="80px" className="button"/></Link>
                     </div>
                     
                     <img className='logo-middle' src={logo} alt="" />
                     
-                    <div>
-                        <Link to="/pixels/" className="create-button">Listar Pixels</Link>
+                    <div className='bg-icons right'>
+                        <Link to="/pixels/" className='link-middle-right'><BiSearchAlt2  color='#AE3C56' size="80px" className="button"/></Link>
                     </div>
                     
                 </div>
-               
+               <div className='redes-container'>
+                    <div className='lista-redes'>
+                        <Link to="#" ><TiSocialInstagram size="35px" color="#131418" className='icon'/></Link>
+                        <Link to="#"><TiSocialFacebook size="35px" color="#131418" className='icon'/></Link>
+                        <Link to="#"><FaXTwitter size="35px" color="#131418" className='icon'/></Link>
+                        <Link to="#"><FaReddit size="35px" color="#131418" className='icon'/></Link>
+                    </div>
+                        
+                    
+               </div>
             </main>
+
             
             
         </div>
