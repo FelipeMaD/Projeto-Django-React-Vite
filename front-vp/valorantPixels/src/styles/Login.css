@@ -15,11 +15,23 @@ tons escuros: #131418 */
   font-family: 'Inria Sans';
 }
 
+body{
+  background-color: #131418;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+
 
 .login-title{
   text-align: center;margin-bottom: 20px;color: black;font-weight: 800;padding-bottom: 18px; border-bottom: 3px solid #AE3C56;
+  font-size: 2.4rem;
 }
 .login-container {
+  margin-top: 50px;
   max-width: 500px;
   width: 375px;
   margin: 0 auto;
@@ -48,6 +60,7 @@ tons escuros: #131418 */
     color: #fff;
     cursor: pointer;
     margin-top: 50px;
+    border: none;
     border-bottom: 4px solid #411D23;
     font-size: 18px;
   
@@ -55,9 +68,9 @@ tons escuros: #131418 */
 
 .login-container button:hover {
   background-color: #B11A3C;
-  border: #B11A3C;
+  border-top: 4px solid  #520013;
+  border-bottom: none;
 }
-
 
 .form-login{
   margin-top: 40px;
@@ -87,6 +100,8 @@ tons escuros: #131418 */
   height: 58px;
   border-radius: 5px;
   font-size: 16px;
+  background-color: #131418;
+  color: white
 
 }
 
