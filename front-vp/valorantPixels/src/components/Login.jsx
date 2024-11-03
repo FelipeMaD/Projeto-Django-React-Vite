@@ -24,7 +24,7 @@ function Login() {
       // Armazena o token de acesso no localStorage
       localStorage.setItem('token', response.data.access)
       // Redireciona para a página de listagem de posts após o login bem-sucedido
-      navigate('/pixels/')
+      navigate('/Home/')
     } catch (error) {
       // Registra qualquer erro ocorrido ao fazer login
       console.error('Erro ao fazer login:', error)

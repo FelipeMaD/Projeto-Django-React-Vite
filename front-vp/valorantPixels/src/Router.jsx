@@ -8,6 +8,7 @@ import Login from './components/Login'
 import PrivateRoute from './components/PrivateRoute'
 import EditPixel from './components/EditPixel'
 import ReadPixel from './components/ReadPixel'
+import Home from './components/Home'
 
 // Define o componente AppRouter que contém as rotas da aplicação
 function AppRouter() {
@@ -20,6 +21,7 @@ function AppRouter() {
         <Route path="/" element={<Login />} />
         {/* Rotas protegidas que requerem autenticação */}
         <Route element={<PrivateRoute />}>
+          <Route path="/Home" element={<Home/>}/>
           {/* Rota para a listagem de posts */}
           <Route path="/pixels" element={<PixelList />} />
           {/* Rota para criar um novo post */}

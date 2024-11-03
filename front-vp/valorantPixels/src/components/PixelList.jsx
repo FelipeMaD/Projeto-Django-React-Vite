@@ -2,7 +2,7 @@
 // e o módulo api para fazer solicitações HTTP.
 import { useState, useEffect } from 'react'
 import api from '../api'
-import { API_URL } from '../../config' 
+
 
 // Importa o componente Link do react-router-dom para navegação entre rotas.
 import { Link } from 'react-router-dom'
