@@ -34,11 +34,17 @@ function Login() {
   // Retorna a interface do componente Login
   return (
     <div className="login-container"> {/* Adiciona uma classe ao contêiner */}
-      <h1>Login</h1>
+      <h1 className='login-title'>LOGIN</h1>
       {/* Formulário de login */}
-      <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Usuário" value={username} onChange={(e) => setUsername(e.target.value)} />
-        <input type="password" placeholder="Senha" value={password} onChange={(e) => setPassword(e.target.value)} />
+      <form onSubmit={handleSubmit} className='form-login'>
+        <div className='inputs-labels'>
+          <h3>Usuário</h3>
+          <input type="text"  value={username} onChange={(e) => setUsername(e.target.value)} className='inputs'/>
+        </div>
+        <div className='inputs-labels'>
+          <h3>Senha</h3>
+          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className='inputs' />
+        </div >
         {/* Botão de login */}
         <button type="submit" className="login-button">Entrar</button> {/* Adiciona uma classe ao botão */}
       </form>
