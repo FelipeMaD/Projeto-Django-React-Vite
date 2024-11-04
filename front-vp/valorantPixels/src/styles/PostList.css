@@ -4,6 +4,7 @@
 .master-div{
   height: 100vh;
 }
+
 .post-list-container {
   max-width: 700px;
   margin: 0 auto;
@@ -23,14 +24,15 @@
 
 .post-item {
   margin-bottom: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
+    padding: 30px 20px;
+    border: 1px solid #AE3C56;
+    background-color: #1d1f26;
+    
 }
 
 .post-link-name {
-  color: #007bff;
+  font-family: 'Inria Sans';
+  color: #ffffff;
   font-weight: 700;
   text-decoration: none;
   margin-right: 10px;
@@ -75,11 +77,15 @@
   padding: 20px;
 }
 
-.header {
+.titulo-lista{
+  
+  
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin: 20px 0px;
+    font-family: 'Inria Sans';
 }
 
 .header h1 {

@@ -72,8 +72,8 @@ function PixelList() {
       </nav>
       <div className="post-list-container">
         {/* Cabeçalho da lista de posts com um botão para criar um novo post */}
-        <div className="header">
-          <h1>Lista de Pixels</h1>
+        <div className="titulo-lista">
+          <h1>Pixels da Comunidade</h1>
         </div>
         {/* Lista de posts */}
         <ul>

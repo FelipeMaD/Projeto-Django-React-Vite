@@ -61,6 +61,7 @@ function InteractionList() {
             <li key={interaction.id} className="post-item">
                 {/* Link para os detalhes do post */}
                 <p>{interaction.comentario}</p>
+                <p>{interaction.pixelPost}</p>
                 {/* <Link to={`/pixels/${interaction.id}/detail`} className="post-link-name">Detalhes da interação</Link> */}
                 {/* Botões de ação para editar e excluir o post */}
                 {/* <div className="actions">
