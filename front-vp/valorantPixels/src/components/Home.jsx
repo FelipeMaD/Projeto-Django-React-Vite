@@ -40,14 +40,14 @@ function Home(){
                 </div>
                 <div className="Main-content-area">
                     <div className='boxsize-button'>
-                    <Link to ="/pixels/" className='link-middle-right'><img src={leftchoice} alt="" /></Link>
-                    <BiPlusMedical  color='#AE3C56' size="80px" className="button icon-overlay"/>
+                    <Link to = "/pixels/create" className='link-middle-right'><img src={leftchoice} alt="" />
+                    <BiPlusMedical  color='#AE3C56' size="80px" className="button icon-overlay"/></Link>
                     </div>
                     
                     <img className='logo-middle' src={logo} alt="" />
                     <div className='boxsize-button'>
-                        <Link to ="/pixels/" className='link-middle-right'><img src={rightchoice} alt="" /></Link>
-                        <BiSearchAlt2  color='#AE3C56' size="80px" className="button icon-overlay"/>
+                        <Link to = "/pixels/" className='link-middle-right'><img src={rightchoice} alt="" />
+                        <BiSearchAlt2  color='#AE3C56' size="80px" className="button icon-overlay"/></Link>
                     </div>
                 </div>
                <div className='redes-container'>

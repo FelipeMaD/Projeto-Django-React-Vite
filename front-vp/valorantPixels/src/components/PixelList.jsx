@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import api from '../api'
 import logo from '../assets/logo.png'
+import { FaTrash } from "react-icons/fa";
 
 
 // Importa o componente Link do react-router-dom para navegação entre rotas.
@@ -85,7 +86,7 @@ function PixelList() {
               {/* Botões de ação para editar e excluir o post */}
               <div className="actions">
                 <Link to={`/pixels/${pixel.id}/edit`} className="post-link">Editar</Link>
-                <button onClick={() => handleDelete(pixel.id)} className="delete-button">Deletar</button>
+                <button onClick={() => handleDelete(pixel.id)} className="delete-button"><FaTrash /></button>
               </div>
             </li>
           ))}

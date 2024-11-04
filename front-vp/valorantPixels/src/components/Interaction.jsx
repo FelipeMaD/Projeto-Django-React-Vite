@@ -51,7 +51,7 @@ function InteractionList() {
         <div className="post-list-container">
         {/* Cabeçalho da lista de posts com um botão para criar um novo post */}
         <div className="header">
-            <h1>Lista de Interações</h1>
+            <h1>Comentários</h1>
             {/* <Link to="/pixels/create" className="create-button">Criar Novo Pixel</Link> Adiciona um link para criar um novo post */}
         </div>
         {/* Lista de posts */}
@@ -60,9 +60,11 @@ function InteractionList() {
             {interactions.map(interaction => (
             <li key={interaction.id} className="post-item">
                 {/* Link para os detalhes do post */}
-                <p>{interaction.comentario}</p>
-                <p>{interaction.pixelPost}</p>
-                {/* <Link to={`/pixels/${interaction.id}/detail`} className="post-link-name">Detalhes da interação</Link> */}
+                
+                <Link to={`/interaction/${interaction.id}/detail`} className="post-link-name">
+                  <p>{interaction.comentario}</p>
+                  <p>{interaction.pixelPost}</p>
+                </Link>
                 {/* Botões de ação para editar e excluir o post */}
                 {/* <div className="actions">
                 <Link to={`/pixels/${pixel.id}/edit`} className="post-link">Editar</Link>

@@ -25,6 +25,7 @@ a{
     margin-bottom: 0;
     align-items: center;
     font-family:'Inria Sans';
+    justify-content: space-between;
 }
 
 .left-header{
