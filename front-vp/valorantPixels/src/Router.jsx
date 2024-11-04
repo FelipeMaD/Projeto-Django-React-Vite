@@ -9,7 +9,7 @@ import PrivateRoute from './components/PrivateRoute'
 import EditPixel from './components/EditPixel'
 import ReadPixel from './components/ReadPixel'
 import Home from './components/Home'
-
+import TopAjudantes from './components/TopAjudantes'
 // Define o componente AppRouter que contém as rotas da aplicação
 function AppRouter() {
   return (
@@ -30,6 +30,8 @@ function AppRouter() {
           <Route path="/pixels/:pixelId/edit" element={<EditPixel />} />
           {/* Rota para visualizar os detalhes de um post */}
           <Route path="/pixels/:pixelId/detail" element={<ReadPixel />} />
+          {/* Rota para a lista de top ajudantes */}
+          <Route path="/userProfile" element={<TopAjudantes />} />
         </Route>
       </Routes>
     </Router>
