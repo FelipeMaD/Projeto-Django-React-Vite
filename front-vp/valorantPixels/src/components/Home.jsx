@@ -14,7 +14,7 @@ function Home(){
             <header className='header'>
                 <div className='left-header'>
                     <Link to="/Home" className='home'><img src={logo} alt="" className='imagem' /></Link>
-                    <a href="#"><p>Home</p></a>
+                    <Link to="/Home" className='home'>Home</Link>
                     <a href="#"><p>Sobre nós</p></a>
                 </div>
                 <div className='right-header'>

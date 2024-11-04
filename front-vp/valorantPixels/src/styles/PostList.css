@@ -1,4 +1,9 @@
 /* src/components/PostList.css */
+
+
+.master-div{
+  height: 100vh;
+}
 .post-list-container {
   max-width: 700px;
   margin: 0 auto;

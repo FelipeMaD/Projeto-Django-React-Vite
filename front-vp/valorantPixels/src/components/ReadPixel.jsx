@@ -4,9 +4,12 @@
 import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import api from '../api'
+import InteractionList from './Interaction.jsx'
+import logo from '../assets/logo.png'
 
 // Importa o arquivo de estilo CSS.
 import '../styles/ReadPost.css'
+import '../styles/Home.css'
 
 // Define o componente ReadPost.
 function ReadPixel() {
@@ -35,6 +38,29 @@ function ReadPixel() {
 
   // Retorna a interface do componente ReadPost.
   return (
+    <div>
+       <header className='header'>
+        <div className='left-header'>
+            <Link to="/Home" className='home'><img src={logo} alt="" className='imagem' /></Link>
+            <Link to="/Home" className='home'>Home</Link>
+            <a href="#"><p>Sobre nós</p></a>
+        </div>
+        <div className='right-header'>
+            <a href="#"><p>Suporte</p></a>
+        </div>
+    </header>
+    <nav className='navbar'>
+        <div className='links-navbar'>
+            <Link to="#" className='links-escolha'>agentes</Link>
+            <Link to="#" className='links-escolha'>mapas</Link>
+            <Link to="#" className='links-escolha'>top ajudantes</Link>
+            <Link to="#" className='links-escolha'>comunidade</Link>
+        </div>
+        <div>
+            <div></div>
+            <Link to="#">Hi, joao</Link>
+        </div>
+    </nav>
     <div className="read-post-container">
       {/* Título da página */}
       <h1>Detalhes do Pixel</h1>
@@ -48,7 +74,11 @@ function ReadPixel() {
       <p>{descricao}</p>
       {/* Imagem do post, se existir */}
       {upload && <img src={upload} alt="Imagem do Pixel" className="post-image" />}
+      <div>
+        <InteractionList/>
+      </div>
     </div>
+   </div>
   )
 }
 
