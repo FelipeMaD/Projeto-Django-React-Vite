@@ -7,7 +7,8 @@ import {FaXTwitter } from "react-icons/fa6";
 import { FaReddit } from "react-icons/fa";
 import { BiPlusMedical } from "react-icons/bi";
 import { BiSearchAlt2 } from "react-icons/bi";
-
+import rightchoice from '../assets/rightchoice.svg'
+import leftchoice from '../assets/leftchoice.svg'
 function Home(){
     return(
         <div>
@@ -38,16 +39,16 @@ function Home(){
 
                 </div>
                 <div className="Main-content-area">
-                    <div className='bg-icons left'>
-                        <Link to="/pixels/create" className='link-middle-left'><BiPlusMedical  color='#AE3C56' size="80px" className="button"/></Link>
+                    <div className='boxsize-button'>
+                    <Link to ="/pixels/" className='link-middle-right'><img src={leftchoice} alt="" /></Link>
+                    <BiPlusMedical  color='#AE3C56' size="80px" className="button icon-overlay"/>
                     </div>
                     
                     <img className='logo-middle' src={logo} alt="" />
-                    
-                    <div className='bg-icons right'>
-                        <Link to="/pixels/" className='link-middle-right'><BiSearchAlt2  color='#AE3C56' size="80px" className="button"/></Link>
+                    <div className='boxsize-button'>
+                        <Link to ="/pixels/" className='link-middle-right'><img src={rightchoice} alt="" /></Link>
+                        <BiSearchAlt2  color='#AE3C56' size="80px" className="button icon-overlay"/>
                     </div>
-                    
                 </div>
                <div className='redes-container'>
                     <div className='lista-redes'>
