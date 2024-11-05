@@ -2,6 +2,7 @@
 // e o módulo api para fazer solicitações HTTP.
 import { useState, useEffect } from 'react'
 import api from '../api'
+import { BiPlusMedical } from "react-icons/bi";
 
 
 // Importa o componente Link do react-router-dom para navegação entre rotas.
@@ -34,7 +35,7 @@ function TopAjudantes() {
 
   // Retorna a interface do componente PostList.
   return (
-    <div className='master-div'>
+    <div className='master-div-ajudantes'>
       <header className='header'>
             <div className='left-header'>
                 <Link to="/Home" className='home'><img src={logo} alt="" className='imagem' /></Link>
@@ -50,17 +51,17 @@ function TopAjudantes() {
                 <Link to="#" className='links-escolha'>agentes</Link>
                 <Link to="#" className='links-escolha'>mapas</Link>
                 <Link to="/userProfile" className='links-escolha'>top ajudantes</Link>
-                <Link to="#" className='links-escolha'>comunidade</Link>
+                <Link to = "/pixels/" className='links-escolha'>comunidade</Link>
             </div>
             <div>
                 <div></div>
                 <Link to="#">Hi, joao</Link>
             </div>
       </nav>
-      <div className="post-list-container">
+      <div className="ajudantes-list-container">
         {/* Cabeçalho da lista de posts com um botão para criar um novo post */}
-        <div className="header">
-          <h1 id='header'>Top Ajudantes</h1>
+        <div >
+          <h1 id='titulo-ajudantes' >Top Ajudantes da comunidade</h1>
         </div>
         {/* Lista de posts */}
         <ul>
@@ -68,14 +69,19 @@ function TopAjudantes() {
           {userProfile.map(userProfile => (
             <li key={userProfile.id} className="post-item">
               {/* Link para os detalhes do post */}
-              <Link to={`/userProfile/${userProfile.id}/detail`} className="post-link-name">{userProfile.fraseEfeito}</Link>
+              {/* <Link to={`/userProfile/${userProfile.id}/detail`} className="post-link-name"></Link> */}
               {/* Botões de ação para editar e excluir o post */}
-              {userProfile.profile_picture && <img src={userProfile.profile_picture} alt="Imagem do Usurário" className="post-image" />}
-              {userProfile.userPixels}
+              
+              {userProfile.profile_picture && <img src={userProfile.profile_picture} alt="Imagem do Usurário" className="imagem-ajudante" />}
+              <p>{userProfile.fraseEfeito}</p>
+              <p>{userProfile.userPixels}</p>
             </li> 
           ))}
         </ul>
+        <Link to = "/userProfile/create" className='criar-ajudante'> <BiPlusMedical  color='#AE3C56' size="40px" /></Link>
       </div>
+
+     
     </div>
   )
 }

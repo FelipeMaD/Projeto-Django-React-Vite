@@ -13,6 +13,8 @@ import ReadInteraction from './components/readInteraction.jsx'
 import TopAjudantes from './components/TopAjudantes.jsx'
 import EditInteraction from './components/EditInteraction.jsx'
 import CreateInteraction from './components/EditInteraction.jsx'
+import EditAjudante from './components/EditAjudantes.jsx'
+import CreateAjudante from './components/EditAjudantes.jsx'
 
 // Define o componente AppRouter que contém as rotas da aplicação
 function AppRouter() {
@@ -42,6 +44,10 @@ function AppRouter() {
           <Route path="/interaction/:interactionId/detail" element={<ReadInteraction />} />
           {/* Rota para a lista de top ajudantes */}
           <Route path="/userProfile" element={<TopAjudantes />} />
+
+          <Route path="/userProfile/create" element={<CreateAjudante/>} />
+          <Route path="/userProfile/:userProfileId/edit" element={<CreateAjudante/>} />
+
         </Route>
       </Routes>
     </Router>

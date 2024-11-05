@@ -27,7 +27,7 @@ function Home(){
                     <Link to="#" className='links-escolha'>agentes</Link>
                     <Link to="#" className='links-escolha'>mapas</Link>
                     <Link to="/userProfile" className='links-escolha'>top ajudantes</Link>
-                    <Link to="#" className='links-escolha'>comunidade</Link>
+                    <Link to = "/pixels/" className='links-escolha'>comunidade</Link>
                 </div>
                 <div>
                     <div></div>
