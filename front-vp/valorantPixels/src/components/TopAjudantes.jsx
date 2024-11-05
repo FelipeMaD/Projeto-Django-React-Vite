@@ -90,6 +90,7 @@ function TopAjudantes() {
                 <p>{userProfile.userPixels}</p>
               </div>
               <div>
+                <Link to={`/userProfile/${userProfile.id}/edit`} className="post-link">Editar</Link>
                 <button onClick={() => handleDelete(userProfile.id)} className="delete-button"><FaTrash /></button>
               </div>
              

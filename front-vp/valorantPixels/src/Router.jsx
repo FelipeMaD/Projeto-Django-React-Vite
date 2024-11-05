@@ -46,7 +46,7 @@ function AppRouter() {
           <Route path="/userProfile" element={<TopAjudantes />} />
 
           <Route path="/userProfile/create" element={<CreateAjudante/>} />
-          <Route path="/userProfile/:userProfileId/edit" element={<CreateAjudante/>} />
+          <Route path="/userProfile/:userProfileId/edit" element={<EditAjudante/>} />
 
         </Route>
       </Routes>
