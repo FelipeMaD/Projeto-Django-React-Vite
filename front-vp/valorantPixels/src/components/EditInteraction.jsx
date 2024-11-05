@@ -1,7 +1,7 @@
 // Importa os hooks useState e useEffect do React para gerenciar o estado e efeitos colaterais, respectivamente, 
 // e os hooks useNavigate e useParams do react-router-dom para navegação entre rotas e obtenção de parâmetros da URL.
 import { useState, useEffect } from 'react'
-import { useNavigate, useParams, Link } from 'react-router-dom'
+import { useNavigate, useParams, Link, useLocation } from 'react-router-dom'
 import '../styles/Home.css'
 import logo from '../assets/logo.png'
 
@@ -16,15 +16,18 @@ function EditInteraction() {
   // Obtém o parâmetro postId da URL.
   const { interactionId } = useParams()
   
-  
   // Obtém a função de navegação do hook useNavigate.
   const navigate = useNavigate()
+
+  const location = useLocation()
   
   // Define estados para o título, conteúdo, imagem e imagem atual do post.
+  const pixelId = new URLSearchParams(location.search).get('pixelPost')
+  const [pixelPost, setPixelPost] = useState(pixelId || '')
   const [comentario, setComentario] = useState('')
   const [upload, setImage] = useState('')
   const [currentImage, setCurrentImage] = useState('')
-  const [pixelPost, setCurrentPost] = useState('')
+  // const [pixelPost, setCurrentPost] = useState('')
 
   // Efeito que é executado quando o postId é alterado.
   useEffect(() => {
@@ -78,7 +81,7 @@ function EditInteraction() {
         })
       }
       // Redireciona para a página de listagem de posts após o sucesso da operação.
-      navigate('/interaction/')
+      navigate(`/pixels/${pixelPost}/detail`)
     } catch (error) {
       console.error('Erro ao salvar interação:', error)
     }
