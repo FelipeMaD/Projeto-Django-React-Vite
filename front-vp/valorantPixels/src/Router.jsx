@@ -12,7 +12,6 @@ import Home from './components/Home'
 import ReadInteraction from './components/readInteraction.jsx'
 import TopAjudantes from './components/TopAjudantes.jsx'
 
-import TopAjudantes from './components/TopAjudantes'
 // Define o componente AppRouter que contém as rotas da aplicação
 function AppRouter() {
   return (
