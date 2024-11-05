@@ -75,7 +75,7 @@ function ReadPixel() {
       {/* Imagem do post, se existir */}
       {upload && <img src={upload} alt="Imagem do Pixel" className="post-image" />}
       <div>
-        <InteractionList/>
+        <InteractionList pixelId={pixelId} />
       </div>
     </div>
    </div>
