@@ -1,97 +1,108 @@
-/* src/components/PostList.css */
-@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-}
-
-body{
-    display: flex;
-    align-items: center;
-}
-a{
-    text-decoration: none;
-    color: white;
-}
-.header{
-    display: flex;
-    height: 73px;
-    background-color: black;
-    color: white;
-    box-sizing: border-box;
-    padding: 5px 55px;
-    font-size: 20px;
-    margin-bottom: 0;
-    align-items: center;
-    font-family:'Inria Sans';
-}
-
-.left-header{
-    display: flex;
-    width: 400px;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.imagem{
-    width: 70px;
-    height: 50px;
-}
-
-
-
-.navbar{
-    height: 64px;
-    background-color: #979797;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    box-sizing: border-box;
-    padding: 5px 55px;
-    align-items: center;
-} 
-.links-navbar{
-    display: flex;
-    /* justify-content: space-around; */
-    gap: 104px;
-    width: 800px;
-}
+/* src/components/PostList.css
 .post-list-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .post-list-container h1 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  /* Remover o ponto (bullet) da lista */
-  .post-list-container ul {
-    list-style-type: none; /* Adiciona esta linha */
-    padding: 0;
-  }
-  
-  .post-item {
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 20%;
-    margin-bottom: 20%;
-    border: 1px solid #ccc;
-    border-radius: 30px;
-    background-color: #b82626;
+.post-list-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-    display:flex; 
-    align-items: center;
-    justify-content: space-around;
-  }
-  .post-image {
-    
-    block-size: 6rem;
-    border-radius: 5%;
-    
-  }
+/* Remover o ponto (bullet) da lista */
+/* .post-list-container ul {
+
+
+  list-style-type: none; 
+  padding: 0;
+}
+
+.post-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.post-link-name {
+  color: #007bff;
+  font-weight: 700;
+  text-decoration: none;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.post-link {
+  background-color: #eb9e34;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.post-link:hover {
+  color: #fff;
+  background-color: #c27f21;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+.actions {
+  float: right;
+}
+
+.post-list-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.create-button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  text-decoration: none;
+  margin: 10px 0 0 10px;
+}
+
+.create-button:hover {
+  background-color: #218838;
+  color: #fff;
+}
+#header {
+  display: flex;  
+  justify-content: center;
+} */
+
+
+.master-div{
+  height: 100vh;
+}

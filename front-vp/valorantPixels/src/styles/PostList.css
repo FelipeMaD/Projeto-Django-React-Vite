@@ -1,6 +1,12 @@
 /* src/components/PostList.css */
+
+
+.master-div{
+  height: 100vh;
+}
+
 .post-list-container {
-  max-width: 700px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -18,14 +24,15 @@
 
 .post-item {
   margin-bottom: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
+    padding: 30px 20px;
+    border: 1px solid #AE3C56;
+    background-color: #1d1f26;
+    
 }
 
 .post-link-name {
-  color: #007bff;
+  font-family: 'Inria Sans';
+  color: #ffffff;
   font-weight: 700;
   text-decoration: none;
   margin-right: 10px;
@@ -33,48 +40,47 @@
 }
 
 .post-link {
-  background-color: #eb9e34;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 5px 10px;
-  cursor: pointer;
+  background-color: #AE3C56;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 7px 22px;
+    cursor: pointer;
   margin-right: 5px;
 }
 
 .post-link:hover {
   color: #fff;
-  background-color: #c27f21;
+  background-color: #420311;
 }
 
 .delete-button {
-  background-color: #dc3545;
+  background-color: #B11A3C;
   color: #fff;
   border: none;
   border-radius: 5px;
-  padding: 5px 10px;
+  padding: 9px 33px;
   cursor: pointer;
 }
 
 .delete-button:hover {
-  background-color: #c82333;
+  background-color: #420311;
 }
 
 .actions {
   float: right;
 }
 
-.post-list-container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-}
 
-.header {
+.titulo-lista{
+  
+  
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin: 20px 0px;
+    font-family: 'Inria Sans';
 }
 
 .header h1 {
