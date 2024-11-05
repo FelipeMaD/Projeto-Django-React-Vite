@@ -3,12 +3,13 @@
 // e o módulo api para fazer solicitações HTTP.
 import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
+import { IoCaretBackOutline } from "react-icons/io5";
 import api from '../api'
 import InteractionList from './Interaction.jsx'
 import logo from '../assets/logo.png'
 
 // Importa o arquivo de estilo CSS.
-import '../styles/ReadPost.css'
+import '../styles/ReadPixel.css'
 import '../styles/Home.css'
 
 // Define o componente ReadPost.
@@ -38,7 +39,7 @@ function ReadPixel() {
 
   // Retorna a interface do componente ReadPost.
   return (
-    <div>
+    <div className='div-read-pixels'>
        <header className='header'>
         <div className='left-header'>
             <Link to="/Home" className='home'><img src={logo} alt="" className='imagem' /></Link>
@@ -53,7 +54,7 @@ function ReadPixel() {
         <div className='links-navbar'>
             <Link to="#" className='links-escolha'>agentes</Link>
             <Link to="#" className='links-escolha'>mapas</Link>
-            <Link to="#" className='links-escolha'>top ajudantes</Link>
+            <Link to="/userProfile" className='links-escolha'>top ajudantes</Link>
             <Link to="#" className='links-escolha'>comunidade</Link>
         </div>
         <div>
@@ -61,20 +62,22 @@ function ReadPixel() {
             <Link to="#">Hi, joao</Link>
         </div>
     </nav>
+    <Link to="/pixels" >
+        <button type="button" className="back-button"><IoCaretBackOutline color='#AE3C56' size='29px'/></button>
+    </Link>
+    <h1 className='titulo-detalhes'>DETALHES DO PIXEL</h1>
     <div className="read-post-container">
-      {/* Título da página */}
-      <h1>Detalhes do Pixel</h1>
-      {/* Link para voltar para a lista de posts */}
-      <Link to="/pixels" >
-        <button type="button" className="back-button">Voltar para Listagem</button>
-      </Link>
-      {/* Título do post */}
-      <h2>{titulo}</h2>
-      {/* Conteúdo do post */}
-      <p>{descricao}</p>
-      {/* Imagem do post, se existir */}
-      {upload && <img src={upload} alt="Imagem do Pixel" className="post-image" />}
-      <div>
+      <div className='conteudo-pixel'>
+        <div className='titulo-desc'>
+          <p>Título: {titulo}</p>
+          <p>Descrição: {descricao}</p>
+        </div>
+        {/* Conteúdo do post */} 
+        {/* Imagem do post, se existir */}
+        {upload && <img src={upload} alt="Imagem do Pixel" className="pixel-image" />}
+      </div>
+     
+      <div className='interaction-list'>
         <InteractionList pixelId={pixelId} />
       </div>
     </div>

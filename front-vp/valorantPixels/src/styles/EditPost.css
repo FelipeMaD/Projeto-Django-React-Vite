@@ -1,12 +1,11 @@
 /* src/styles/EditPost.css */
-*{
-  color: white;
-}
+
 
 .edit-post-container {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
+  color: white;
 }
 
 #main-box{
@@ -25,8 +24,8 @@
   max-width: 100%;
 }
 
-input[type="text"],
-textarea {
+#input-titulo,
+#input-descricao {
   width: 100%;
   padding: 10px;
   border: 1px solid #ff0024;
@@ -58,7 +57,7 @@ textarea {
   padding: 10px 40px;
   font-size: 16px;
   cursor: pointer;
-  margin: 10px;
+
 }
 
 .back-button:hover {

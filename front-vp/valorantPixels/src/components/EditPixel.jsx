@@ -121,12 +121,12 @@ function EditPixel() {
           <div className='inputs-div'>
             <h3 className='h3-inputs'>Nome do pixel:</h3>
             {/* Inputs para inserir título e conteúdo do post. */}
-            <input type="text" placeholder="Título" value={titulo} onChange={(e) => setTitle(e.target.value)} />
+            <input type="text" placeholder="Título" value={titulo} onChange={(e) => setTitle(e.target.value)} id='input-titulo'/>
           </div>
 
          <div className='inputs-div'>
           <h3 className='h3-inputs'>Descrição:</h3>
-          <textarea placeholder="Conteúdo" value={descricao} onChange={(e) => setContent(e.target.value)} />
+          <textarea placeholder="Conteúdo" value={descricao} onChange={(e) => setContent(e.target.value)} id='input-descricao'/>
          </div>
          
          
