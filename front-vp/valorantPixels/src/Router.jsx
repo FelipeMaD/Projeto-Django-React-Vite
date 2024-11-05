@@ -33,6 +33,9 @@ function AppRouter() {
           <Route path="/pixels/:pixelId/detail" element={<ReadPixel />} />
 
           <Route path="/interaction/:interactionId/detail" element={<ReadInteraction />} />
+
+          {/* Rota para a lista de top ajudantes */}
+          <Route path="/userProfile" element={<TopAjudantes />} />
         </Route>
       </Routes>
     </Router>
