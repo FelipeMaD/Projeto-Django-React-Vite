@@ -34,7 +34,7 @@ function ReadInteraction() {
 
   // Retorna a interface do componente ReadPost.
   return (
-    <div>
+    <div className='master-div'>
        <header className='header'>
         <div className='left-header'>
             <Link to="/Home" className='home'><img src={logo} alt="" className='imagem' /></Link>
