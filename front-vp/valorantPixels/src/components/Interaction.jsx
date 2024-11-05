@@ -48,7 +48,7 @@ function InteractionList({ pixelId }) {
   // Retorna a interface do componente PostList.
   return (
     <div>
-        <div className="post-list-container">
+        <div className="interaction-list">
         {/* Cabeçalho da lista de posts com um botão para criar um novo post */}
         <div className="header">
             <h1>Comentários</h1>
@@ -58,12 +58,11 @@ function InteractionList({ pixelId }) {
         <ul>
             {/* Mapeia cada post na lista de posts e renderiza um item de lista para cada um */}
             {interactions.map(interaction => (
-            <li key={interaction.id} className="post-item">
+            <li key={interaction.id} className="interaction-item">
                 {/* Link para os detalhes do post */}
-                
-                <Link to={`/interaction/${interaction.id}/detail`} className="post-link-name">
+                <div className='fake-img'></div>
+                <Link to={`/interaction/${interaction.id}/detail`} className="interaction-link-name">
                   <p>{interaction.comentario}</p>
-                  <p>{interaction.pixelPost}</p>
                 </Link>
                 {/* Botões de ação para editar e excluir o post */}
                 {/* <div className="actions">

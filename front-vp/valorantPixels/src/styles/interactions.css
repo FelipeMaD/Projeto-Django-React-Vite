@@ -1,0 +1,27 @@
+.interaction-item{
+    list-style: none;
+    display: flex;
+    padding: 30px;
+    margin-bottom: 10px;
+    background-color: rgb(27, 27, 34);
+    align-items: center;
+    gap: 29px;
+    border: 1px solid #AE3C56;
+}
+
+.interaction-link-name{
+    width: 89%;
+    background-color: white;
+    color: #131418;
+    border-radius: 7px;
+    display: flex;
+    padding: 8px 20px;
+    justify-content: space-between;
+}
+
+.fake-img{
+    background-color: black;
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+}
