@@ -1,8 +1,19 @@
 /* src/styles/EditPost.css */
+*{
+  color: white;
+}
+
 .edit-post-container {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
+}
+
+#main-box{
+  background-color: #0f1923;
+  border: 1px solid #ff0024;
+  border-radius: 0;
+  padding: 1rem;
 }
 
 .post-image {
@@ -18,43 +29,77 @@ input[type="text"],
 textarea {
   width: 100%;
   padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 1px solid #ff0024;
   font-size: 16px;
+  background-color: #ffffff00;
+  margin-left: 1,5rem;
 }
 
-input[type="file"] {
-  margin-bottom: 20px;
-}
 
 .save-button {
-  background-color: #28a745;
+  background-color: #ffffff00;
+  border: 1px solid #ff0024;
   color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
+  padding: 10px 40px;
   font-size: 16px;
   cursor: pointer;
-  margin: 10px;
+
 }
 
 .save-button:hover {
-  background-color: #218838;
+  background-color: #ff00228a;
   color: #fff;
 }
 
 .back-button {
-  background-color: #292929;
+  background-color: #ffffff00;
+  border: 1px solid #ff0024;
   color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
+  padding: 10px 40px;
   font-size: 16px;
   cursor: pointer;
   margin: 10px;
 }
 
 .back-button:hover {
-  background-color: #0056b3;
+  background-color: #ff00228a;
+}
+
+#file-upload-button {
+  display: none;
+}
+
+
+.file-upload-label {
+  background-color: #ffffff00;
+  color: white;
+  border: 1px solid #ff0024;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+  display: inline-block;
+}
+
+.file-upload-label:hover {
+  background-color: #ff00228a;
+}
+
+textarea {
+  resize: none;
+}
+
+.inputs-div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.inputs-div h3{
+  color: #fff;
+}
+.h3-inputs{
+  width: 11rem;
+
 }
