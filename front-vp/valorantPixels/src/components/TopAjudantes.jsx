@@ -24,7 +24,7 @@ function TopAjudantes() {
       // Faz uma solicitação DELETE para a API para excluir o post com o ID fornecido.
       await api.delete(`/userProfile/${userProfileId}/`)
       // Atualiza o estado removendo o post excluído da lista.
-      const updatedUserProfile = pixels.filter(userProfile => userProfile.id !== userProfileId)
+      const updatedUserProfile = userProfile.filter(userProfile => userProfile.id !== userProfileId)
       setUserProfile(updatedUserProfile)
       alert('Profile deletado com sucesso!')
     } catch (error) {
