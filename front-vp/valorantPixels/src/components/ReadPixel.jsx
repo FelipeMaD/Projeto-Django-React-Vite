@@ -62,8 +62,8 @@ function ReadPixel() {
             <Link to="#">Hi, joao</Link>
         </div>
     </nav>
-    <Link to="/pixels" >
-        <button type="button" className="back-button"><IoCaretBackOutline color='#AE3C56' size='29px'/></button>
+    <Link to="/pixels" className='link-voltar'>
+        <button type="button" className="botao-voltar"><IoCaretBackOutline color='#AE3C56' size='29px'/></button>
     </Link>
     <h1 className='titulo-detalhes'>DETALHES DO PIXEL</h1>
     <div className="read-post-container">
@@ -79,6 +79,10 @@ function ReadPixel() {
      
       <div className='interaction-list'>
         <InteractionList pixelId={pixelId} />
+      </div>
+
+      <div>
+      <Link to = "/interaction/create" className='link-middle-right'> Comentar </Link>
       </div>
     </div>
    </div>

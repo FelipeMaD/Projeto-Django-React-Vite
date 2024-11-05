@@ -62,5 +62,18 @@
   gap: 20px;
 }
 
+.botao-voltar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 12px;
+  margin-top: 10px;
+  background-color: #21232a;
+}
 
 
+.link-voltar{
+  width: 100px;
+}
