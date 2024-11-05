@@ -52,7 +52,7 @@ function Home(){
                 </div>
                <div className='redes-container'>
                     <div className='lista-redes'>
-                        <Link to="#" ><TiSocialInstagram size="35px" color="#131418" className='icon'/></Link>
+                        <Link to="https://www.instagram.com/joaod_tx/" ><TiSocialInstagram size="35px" color="#131418" className='icon'/></Link>
                         <Link to="#"><TiSocialFacebook size="35px" color="#131418" className='icon'/></Link>
                         <Link to="#"><FaXTwitter size="35px" color="#131418" className='icon'/></Link>
                         <Link to="#"><FaReddit size="35px" color="#131418" className='icon'/></Link>
