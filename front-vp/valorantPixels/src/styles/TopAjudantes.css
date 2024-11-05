@@ -1,4 +1,4 @@
-/* src/components/PostList.css */
+/* src/components/PostList.css
 .post-list-container {
   max-width: 700px;
   margin: 0 auto;
@@ -11,8 +11,10 @@
 }
 
 /* Remover o ponto (bullet) da lista */
-.post-list-container ul {
-  list-style-type: none; /* Adiciona esta linha */
+/* .post-list-container ul {
+
+
+  list-style-type: none; 
   padding: 0;
 }
 
@@ -98,4 +100,9 @@
 #header {
   display: flex;  
   justify-content: center;
+} */
+
+
+.master-div{
+  height: 100vh;
 }

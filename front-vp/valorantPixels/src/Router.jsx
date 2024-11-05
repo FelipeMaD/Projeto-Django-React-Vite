@@ -10,6 +10,7 @@ import EditPixel from './components/EditPixel'
 import ReadPixel from './components/ReadPixel'
 import Home from './components/Home'
 import ReadInteraction from './components/readInteraction.jsx'
+import TopAjudantes from './components/TopAjudantes.jsx'
 
 // Define o componente AppRouter que contém as rotas da aplicação
 function AppRouter() {
