@@ -2,6 +2,8 @@
 // e os hooks useNavigate e useParams do react-router-dom para navegação entre rotas e obtenção de parâmetros da URL.
 import { useState, useEffect } from 'react'
 import { useNavigate, useParams, Link } from 'react-router-dom'
+import '../styles/Home.css'
+import logo from '../assets/logo.png'
 
 // Importa o módulo api para fazer solicitações HTTP.
 import api from '../api'
@@ -83,28 +85,80 @@ function EditPixel() {
 
   // Retorna a interface do componente EditPost.
   return (
-    <div className="edit-post-container">
-      {/* Título dinâmico com base na existência do postId. */}
-      <h1>{pixelId ? 'Editar Pixel' : 'Criar Novo Pixel'}</h1>
-      {/* Formulário de edição/criação do post. */}
-      <form onSubmit={handleSubmit}>
-        <div>
-          {/* Exibe a imagem atual do post, se existir. */}
-          {currentImage && <img src={currentImage} alt="Imagem do Pixel" className="post-image" />}
-          {/* Input para selecionar uma nova imagem. */}
-          <input type="file" accept="upload/*" onChange={handleImageChange} />
+    <div className='master-div'>
+      <header className='header'>
+        <div className='left-header'>
+            <Link to="/Home" className='home'><img src={logo} alt="" className='imagem' /></Link>
+            <Link to="/Home" className='home'>Home</Link>
+            <a href="#"><p>Sobre nós</p></a>
         </div>
-        {/* Inputs para inserir título e conteúdo do post. */}
-        <input type="text" placeholder="Título" value={titulo} onChange={(e) => setTitle(e.target.value)} />
-        <textarea placeholder="Conteúdo" value={descricao} onChange={(e) => setContent(e.target.value)} />
-        {/* Botão para salvar o post (editar ou criar). */}
-        <button className="save-button" type="submit">{pixelId ? 'Salvar' : 'Criar'}</button>
-        {/* Link para voltar para a listagem de posts. */}
-        <Link to="/pixels" >
-          <button type="button" className="back-button">Voltar para Listagem</button>
-        </Link>
-      </form>
+        <div className='right-header'>
+            <a href="#"><p>Suporte</p></a>
+        </div>
+      </header>
+      <nav className='navbar'>
+        <div className='links-navbar'>
+            <Link to="#" className='links-escolha'>agentes</Link>
+            <Link to="#" className='links-escolha'>mapas</Link>
+            <Link to="/userProfile" className='links-escolha'>top ajudantes</Link>
+            <Link to="#" className='links-escolha'>comunidade</Link>
+        </div>
+        <div>
+            <Link to="#">Hi, joao</Link>
+        </div>
+      </nav>
+
+
+      <div className="edit-post-container">
+        {/* Título dinâmico com base na existência do postId. */}
+        <h1>{pixelId ? 'Editar Pixel' : 'Criar Novo Pixel'}</h1>
+
+        {/* Formulário de edição/criação do post. */}
+        <div id='main-box'>
+
+        <form onSubmit={handleSubmit}>
+
+          <div className='inputs-div'>
+            <h3 className='h3-inputs'>Nome do pixel:</h3>
+            {/* Inputs para inserir título e conteúdo do post. */}
+            <input type="text" placeholder="Título" value={titulo} onChange={(e) => setTitle(e.target.value)} />
+          </div>
+
+         <div className='inputs-div'>
+          <h3 className='h3-inputs'>Descrição:</h3>
+          <textarea placeholder="Conteúdo" value={descricao} onChange={(e) => setContent(e.target.value)} />
+         </div>
+         
+         
+         
+          <div>
+            {/* Exibe a imagem atual do post, se existir. */}
+            {currentImage && <img src={currentImage} alt="Imagem do Pixel" className="post-image" />}
+
+            <div className='inputs-div'>
+            {/* Input para selecionar uma nova imagem. */}
+            <h3>Foto/Videos:</h3>
+            <input type="file" accept="upload/*" onChange={handleImageChange} id="file-upload-button" />
+            <label htmlFor="file-upload-button" className="file-upload-label">Escolher Arquivo</label>
+            </div>
+          </div>
+
+
+
+
+
+
+      
+          {/* Botão para salvar o post (editar ou criar). */}
+          <button className="save-button" type="submit">{pixelId ? 'Salvar' : 'Criar'}</button>
+          {/* Link para voltar para a listagem de posts. */}
+          <Link to="/pixels" >
+            <button type="button" className="back-button">Voltar para Listagem</button>
+          </Link>
+        </form>
+      </div>
     </div>
+        </div>
   )
 }
 
