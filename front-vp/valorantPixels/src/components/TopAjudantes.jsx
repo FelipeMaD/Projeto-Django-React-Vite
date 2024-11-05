@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react'
 import api from '../api'
 
+import logo from '../assets/logo.png'
+
 
 // Importa o componente Link do react-router-dom para navegação entre rotas.
 import { Link } from 'react-router-dom'
@@ -32,7 +34,30 @@ function TopAjudantes() {
 
   // Retorna a interface do componente PostList.
   return (
-    <div className="post-list-container">
+    
+    <div>
+      <header className='header'>
+        <div className='left-header'>
+            <Link to="/Home" className='home'><img src={logo} alt="" className='imagem' /></Link>
+            <a href="#"><p>Home</p></a>
+            <a href="#"><p>Sobre nós</p></a>
+        </div>
+        <div className='right-header'>
+            <a href="#"><p>Suporte</p></a>
+        </div>
+      </header>
+      <nav className='navbar'>
+        <div className='links-navbar'>
+          <Link to="#" className='links-escolha'>agentes</Link>
+          <Link to="#" className='links-escolha'>mapas</Link>
+          <Link to="/userProfile/" className='links-escolha'>top ajudantes</Link>
+          <Link to="#" className='links-escolha'>comunidade</Link>
+        </div>
+        <div>
+          <div></div>
+          <Link to="#">Hi, joao</Link>
+        </div>
+      </nav>
       {/* Cabeçalho da lista de posts com um botão para criar um novo post */}
       <div className="header">
         <h1 id='header'>Top Ajudantes</h1>
@@ -45,8 +70,11 @@ function TopAjudantes() {
             {/* Link para os detalhes do post */}
             <Link to={`/userProfile/${userProfile.id}/detail`} className="post-link-name">{userProfile.fraseEfeito}</Link>
             {/* Botões de ação para editar e excluir o post */}
-            {userProfile.upload && <img src={userProfile.upload} alt="Imagem do Usurário" className="post-image" />}
+            {userProfile.profile_picture && <img src={userProfile.profile_picture} alt="Imagem do Usurário" className="post-image" />}
+            <div>Quantidade de pixels : {userProfile.userPixels}
+              </div>
           </li>
+
         ))}
       </ul>
     </div>
