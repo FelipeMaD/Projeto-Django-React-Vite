@@ -13,7 +13,7 @@ import '../styles/interactions.css'
 
 
 // Define o componente PostList.
-function InteractionList() {
+function InteractionList({ pixelId }) {
   // Define o estado para armazenar a lista de posts.
   const [interactions, setInteractions] = useState([])
 
@@ -34,7 +34,7 @@ function InteractionList() {
   // Efeito que é executado uma vez após a renderização inicial do componente.
   useEffect(() => {
     // Faz uma solicitação GET para a API para obter a lista de posts.
-    api.get(`/interaction/`)
+    api.get(`/interaction/?pixelPost=${pixelId}`)
       .then(response => {
         // Atualiza o estado com a lista de posts obtida da API.
         console.log('Resposta da API:', response.data)
@@ -43,7 +43,7 @@ function InteractionList() {
       .catch(error => {
         console.error('Erro ao buscar interações:', error)
       })
-  }, [])
+  }, [pixelId])
 
   // Retorna a interface do componente PostList.
   return (
