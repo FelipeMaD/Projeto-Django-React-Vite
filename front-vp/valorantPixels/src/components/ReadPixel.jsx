@@ -82,7 +82,7 @@ function ReadPixel() {
       </div>
 
       <div>
-      <Link to = "/interaction/create" className='link-middle-right'> Comentar </Link>
+      <Link to={`/interaction/create?pixelPost=${pixelId}`} className='link-middle-right'>Comentar</Link>
       </div>
     </div>
    </div>
