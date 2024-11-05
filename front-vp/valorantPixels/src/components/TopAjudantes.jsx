@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import api from '../api'
 import { BiPlusMedical } from "react-icons/bi";
+import { FaTrash } from "react-icons/fa";
 
 
 // Importa o componente Link do react-router-dom para navegação entre rotas.
@@ -16,8 +17,20 @@ import '../styles/Home.css'
 // Define o componente PostList.
 function TopAjudantes() {
   // Define o estado para armazenar a lista de posts.
-  const [userProfile, setPixels] = useState([])
+  const [userProfile, setUserProfile] = useState([])
 
+  const handleDelete = async (userProfileId) => {
+    try {
+      // Faz uma solicitação DELETE para a API para excluir o post com o ID fornecido.
+      await api.delete(`/userProfile/${userProfileId}/`)
+      // Atualiza o estado removendo o post excluído da lista.
+      const updatedUserProfile = pixels.filter(userProfile => userProfile.id !== userProfileId)
+      setUserProfile(updatedUserProfile)
+      alert('Profile deletado com sucesso!')
+    } catch (error) {
+      console.error('Erro ao deletar profile:', error)
+    }
+  }
 
   // Efeito que é executado uma vez após a renderização inicial do componente.
   useEffect(() => {
@@ -26,7 +39,7 @@ function TopAjudantes() {
       .then(response => {
         // Atualiza o estado com a lista de posts obtida da API.
         console.log('Resposta da API:', response.data)
-        setPixels(response.data.results)
+        setUserProfile(response.data.results)
       })
       .catch(error => {
         console.error('Erro ao buscar usuários:', error)
@@ -71,10 +84,16 @@ function TopAjudantes() {
               {/* Link para os detalhes do post */}
               {/* <Link to={`/userProfile/${userProfile.id}/detail`} className="post-link-name"></Link> */}
               {/* Botões de ação para editar e excluir o post */}
+              <div id='info-ajudantes'>
+                {userProfile.profile_picture && <img src={userProfile.profile_picture} alt="Imagem do Usurário" className="imagem-ajudante" />}
+                <p>{userProfile.fraseEfeito}</p>
+                <p>{userProfile.userPixels}</p>
+              </div>
+              <div>
+                <button onClick={() => handleDelete(userProfile.id)} className="delete-button"><FaTrash /></button>
+              </div>
+             
               
-              {userProfile.profile_picture && <img src={userProfile.profile_picture} alt="Imagem do Usurário" className="imagem-ajudante" />}
-              <p>{userProfile.fraseEfeito}</p>
-              <p>{userProfile.userPixels}</p>
             </li> 
           ))}
         </ul>

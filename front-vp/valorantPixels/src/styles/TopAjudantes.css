@@ -110,9 +110,18 @@
 }
 
 .criar-ajudante{
-  justify-self: center;
-  align-self: center;
-  margin: 20px 0px;
+  width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin: 20px 0px;
+    border: thin solid #b11a3c;
+    padding: 8px 0px;
+    transition: 0.2s ease-in-out;
+}
+
+.criar-ajudante:hover{
+  background-color: #c02247;
 }
 
 .ajudantes-list-container{
@@ -146,5 +155,12 @@
 }
 
 #ajudantes{
-  justify-content: start;
+  justify-content: space-between;
+}
+
+#info-ajudantes{
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  font-size: 18px;
 }
