@@ -11,6 +11,7 @@ import ReadPixel from './components/ReadPixel'
 import Home from './components/Home'
 import ReadInteraction from './components/readInteraction.jsx'
 
+import TopAjudantes from './components/TopAjudantes'
 // Define o componente AppRouter que contém as rotas da aplicação
 function AppRouter() {
   return (
@@ -33,6 +34,8 @@ function AppRouter() {
           <Route path="/pixels/:pixelId/detail" element={<ReadPixel />} />
 
           <Route path="/interaction/:interactionId/detail" element={<ReadInteraction />} />
+          {/* Rota para a lista de top ajudantes */}
+          <Route path="/userProfile" element={<TopAjudantes />} />
         </Route>
       </Routes>
     </Router>
