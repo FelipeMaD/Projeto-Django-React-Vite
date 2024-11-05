@@ -70,8 +70,9 @@ function TopAjudantes() {
               {/* Link para os detalhes do post */}
               <Link to={`/userProfile/${userProfile.id}/detail`} className="post-link-name">{userProfile.fraseEfeito}</Link>
               {/* Botões de ação para editar e excluir o post */}
-              {userProfile.upload && <img src={userProfile.upload} alt="Imagem do Usurário" className="post-image" />}
-            </li>
+              {userProfile.profile_picture && <img src={userProfile.profile_picture} alt="Imagem do Usurário" className="post-image" />}
+              {userProfile.userPixels}
+            </li> 
           ))}
         </ul>
       </div>
