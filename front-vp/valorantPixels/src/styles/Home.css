@@ -6,6 +6,10 @@
     padding: 0;
 }
 
+.master-div{
+    height: 100vh;
+}
+
 body{
     display: flex;
     align-items: center;
