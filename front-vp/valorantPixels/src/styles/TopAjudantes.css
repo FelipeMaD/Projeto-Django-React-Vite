@@ -144,3 +144,7 @@
   margin: 20px 0px;
 
 }
+
+#ajudantes{
+  justify-content: start;
+}

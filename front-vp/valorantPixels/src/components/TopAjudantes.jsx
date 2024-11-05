@@ -67,7 +67,7 @@ function TopAjudantes() {
         <ul>
           {/* Mapeia cada post na lista de posts e renderiza um item de lista para cada um */}
           {userProfile.map(userProfile => (
-            <li key={userProfile.id} className="post-item">
+            <li key={userProfile.id} className="post-item" id='ajudantes'>
               {/* Link para os detalhes do post */}
               {/* <Link to={`/userProfile/${userProfile.id}/detail`} className="post-link-name"></Link> */}
               {/* Botões de ação para editar e excluir o post */}

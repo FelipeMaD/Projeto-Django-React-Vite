@@ -10,7 +10,7 @@ import { FaTrash } from "react-icons/fa";
 import { Link } from 'react-router-dom'
 
 // Importa o arquivo de estilo CSS.
-import '../styles/PostList.css'
+import '../styles/PixelList.css'
 import '../styles/Home.css'
 
 // Define o componente PostList.
